@@ -18,6 +18,9 @@
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    html {
+  scroll-behavior: smooth;
+}
     body {
       background: #f3f6fc;
       font-family: 'Segoe UI', sans-serif;
@@ -1143,7 +1146,7 @@
 
 
 
-<section class="callback-section text-center">
+<section class="callback-section text-center" id="contact-form">
   <h4 class="fw-bold mb-4 text-dark">Request a Call Back from our Experts</h4>
   <div class="container">
     <form id="callbackForm" onsubmit="handleSubmit(event)" class="callback-box row g-3 justify-content-center align-items-center">
@@ -1408,6 +1411,9 @@ Absolutely. If you feel the caregiver is not the right fit, we can arrange a rep
   </a>
   <a href="tel:+918725024124" class="contact-btn call-btn">
     <i class="fas fa-phone-alt"></i> <span class="label">Call</span>
+  </a>
+   <a href="#contact-form" class="contact-btn form-btn">
+    <i class="fas fa-edit"></i> <span class="label">Form</span>
   </a>
 </div>
 
