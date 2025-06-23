@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zorgers Modern Stats UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5faff;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+  .big-box {
+  background-image: url('./imk.png'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  padding: 60px 40px;
+  color: #fff;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.big-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(0, 32, 96, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: -1;
+  border-radius: 24px;
+}
+
+    .big-box h2 {
+     font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+    }
+
+    .big-box p {
+      font-size: 16px;
+  color: #f0f0f0;
+  margin-top: 10px;
+  line-height: 1.5;
+    }
+
+    .stat-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .stat-box {
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      color: #fff;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .stat-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .stat-box h3 {
+      font-size: 22px;
+      margin: 0 0 6px;
+    }
+
+    .stat-box p {
+      font-size: 14px;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    .light-blue { background-color: #339cff; }
+    .dark-blue { background-color: #0056b3; }
+    .mid-blue  { background-color: #004080; }
+    .deep-blue { background-color: #002855; }
+
+    @media (max-width: 768px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-group {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-grid">
+    
+    <!-- Intro Box -->
+    <div class="big-box">
+      <h2>Trusted Elder Care in Panchkula</h2>
+      <p>
+        With over 11 years of experience, Zorgers provides compassionate, certified care — from daily visits to live-in support — right at your home.
+      </p>
+    </div>
+
+    <!-- Stat Grid -->
+    <div class="stat-group">
+      <div class="stat-box light-blue">
+        <div class="stat-icon"><i class="fas fa-user-shield"></i></div>
+        <h3>11+ Years</h3>
+        <p>Caregiving Experience</p>
+      </div>
+      <div class="stat-box dark-blue">
+        <div class="stat-icon"><i class="fas fa-bed"></i></div>
+        <h3>56,000+</h3>
+        <p>Patients Served</p>
+      </div>
+      <div class="stat-box mid-blue">
+        <div class="stat-icon"><i class="fas fa-user-nurse"></i></div>
+        <h3>5,500+</h3>
+        <p>Certified Attendants</p>
+      </div>
+      <div class="stat-box deep-blue">
+        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+        <h3>ISO 9001:2015</h3>
+        <p>Certified Care Agency</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

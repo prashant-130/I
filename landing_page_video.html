@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elder Care Services - Panchkula</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS & Icons -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+  <style>
+    body {
+      background: #f3f6fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      filter: brightness(0.4);
+    }
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 60px;
+      max-width: 600px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      line-height: 1.3;
+      margin: 20px 0;
+    }
+
+    .feature-icon-box {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .feature-icon-box i {
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .stat-boxes1 {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .stat-box1 {
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 10px 10px;
+      text-align: center;
+    }
+
+    .btn-custom {
+      background: #007bff;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 30px;
+      color: #fff;
+      font-weight: 500;
+      margin-top: 30px;
+      transition: 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background: #0056d2;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-overlay {
+        padding: 30px;
+        max-width: 100%;
+      }
+
+      .stat-boxes1 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-icon-box {
+        justify-content: center;
+      }
+    }
+   
+   
+     .list-hover li {
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+  }
+
+  .list-hover li:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    background-color: #f8f9fa;
+  }
+
+  .icon-check {
+    color: #0072ce;
+    margin-right: 12px;
+    font-size: 1.2rem;
+  }
+  
+  
+      .stats-section {
+      background-color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .stat-box {
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+    .stat-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+    .stat-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #007bff;
+    }
+    .stat-label {
+      font-size: 16px;
+      color: #555;
+    }
+    .stat-highlight {
+      background-color: #007bff;
+      color: white;
+    }
+    .stat-highlight .stat-icon,
+    .stat-highlight .stat-value,
+    .stat-highlight .stat-label {
+      color: white;
+    }
+    
+    
+     .callback-section {
+      padding: 40px 20px;
+      color: white;
+    }
+    .callback-box {
+      background-color: #ffffff;
+      padding: 20px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .form-control,
+    .form-select {
+      border-radius: 12px;
+      height: 48px;
+    }
+    .btn-callback {
+      height: 48px;
+      border-radius: 12px;
+      background-color: #3cab2f;
+      color: white;
+      font-weight: 600;
+      border: none;
+      transition: background 0.3s ease;
+     font-size:14px;
+    }
+    .btn-callback:hover {
+      background-color: #2e9325;
+    }
+    
+    
+    .faq-section {
+  background-color: white;
+  height: fit-content;
+
+}
+.faq-body {
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+ 
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+  border: none;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid #CF3425;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #CF3425;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #CF3425;
+  border: 1px solid #CF3425;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+  font-weight: 500;
+  color: #4f5560;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded='true'] 
+{
+ background-color: #f2f5f7 !important;
+ border-top-right-radius: 5px;
+ border-top-left-radius: 5px;
+}
+.accordion button[aria-expanded='true'] {
+  color:#CF3425;
+}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+  color: #7e7f7f;
+}
+@media (min-width: 768px) {
+  .faq-section {
+    padding: 50px 0;
+  
+
+  }
+}
+@media (max-width: 800px) 
+{
+  .faq-section {
+    height: fit-content !important;
+
+  }
+  .accordion .accordion-content p
+  {
+    margin: .5em !important;
+  }
+}
+
+
+
+
+  .divider-line {
+      border-bottom: 1px solid #ccc;
+      margin: 1rem 0 2rem;
+    }
+
+    .icon-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .icon-box i {
+      font-size: 2rem;
+      color: #004080;
+    }
+
+    .mini-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .highlight-nums {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .highlight-nums span.in {
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+    }
+
+    .vertical-line {
+      width: 1px;
+      background-color: #ddd;
+      height: 250px;
+      margin: auto 1rem;
+    }
+
+    .right-img {
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      border: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .vertical-line {
+        display: none;
+      }
+      .highlight-nums {
+        justify-content: center;
+      }
+      .icon-box {
+        justify-content: center;
+      }
+    }
+   
+  </style>
+</head>
+<body>
+
+<section class="hero-section">
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlayed Text -->
+  <div class="hero-overlay text-white">
+    <span class="badge">Panchkula Based Elder Care</span>
+
+    <h1>Healthcare for Your Family in Panchkula</h1>
+
+    <p class="text-light mb-4">Trusted caregiving from Day & Night Care to 24-hour live-in support. 5000+ elders served with love.</p>
+
+    <div class="feature-icon-box">
+      <i class="fas fa-sun"></i>
+      <div>
+        <strong>Day & Night Care</strong><br>
+        <small>Starting ₹750/day</small>
+      </div>
+    </div>
+
+    <div class="feature-icon-box">
+      <i class="fas fa-bed"></i>
+      <div>
+        <strong>24 Hrs Live-in</strong><br>
+        <small>From ₹990/day</small>
+      </div>
+    </div>
+
+    <div class="stat-boxes1">
+      <div class="stat-box1">
+        <h5>100%</h5>
+        <small>Satisfaction</small>
+      </div>
+      <div class="stat-box1">
+        <h5>5000+</h5>
+        <small>Elders Served</small>
+      </div>
+    </div>
+
+    <button class="btn btn-custom">📝 Enquire Now</button>
+  </div>
+</section>
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="bg-white rounded-4 shadow p-4">
+      <h3 class="text-center text-primary fw-bold mb-5">
+        <i class="bi bi-person-vcard-fill me-2"></i>Medical Attendant Work Responsibilities
+      </h3>
+      <div class="row g-4">
+        <!-- Column 1 -->
+        <div class="col-md-6">
+          <ul class="list-unstyled list-hover">
+            <li><i class="bi bi-person-fill-check icon-check"></i>Sponging / Bathing</li>
+            <li><i class="bi bi-diagram-3-fill icon-check"></i>Bed Pan / Diaper Care</li>
+            <li><i class="bi bi-egg-fried icon-check"></i>Serving Diets – as per schedule</li>
+            <li><i class="bi bi-capsule-pill icon-check"></i>Medicine Administration under family supervision</li>
+            <li>
+              <i class="bi bi-activity icon-check"></i>
+              Vital Monitoring – BP / Sugar / Pulse / Respiration / Temp
+              <br />
+              <small class="text-muted ms-4">(*Case to Case basis – Digital Monitoring)</small>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-6">
+          <ul class="list-unstyled list-hover">
+            <li><i class="bi bi-droplet-fill icon-check"></i>Assistance in Urination / Toileting</li>
+            <li><i class="bi bi-cup-hot-fill icon-check"></i>Preparing for Patient Meals <small class="text-muted">(*Only Female Carers)</small></li>
+            <li> <i class="bi bi-house icon-check"></i>Keeping the Elder / Patient Surroundings Clean</li>
+            <li><i class="bi bi-cloud-haze2 icon-check"></i>Nebulization <small class="text-muted">(*Case to Case basis)</small></li>
+            <li>	<i class="bi bi-heart-pulse icon-check"></i>Mobility via walker / wheelchair / hand holding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section container" style=" padding: 3rem 1rem;">
+  <div class="row align-items-center">
+    <!-- Left Section -->
+    <div class="col-md-6">
+      <h2 class="fw-bold">Your trusted partner<br>in healthcare</h2>
+      <p class="text-muted">Take control, make health your goal</p>
+      <div class="divider-line"></div>
+
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <!-- Icon with Text and Image -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="icon-box">
+            <i class="bi bi-heart-pulse-fill"></i>
+          </div>
+          <div>
+            <p class="mb-1 small text-muted">
+              Caring for your family like our own,<br />
+              building a healthier Panchkula community.
+            </p>
+            <img src="nursing-care.webp" alt="Care icon" class="mini-img mt-2" />
+          </div>
+        </div>
+
+        <div class="vertical-line d-none d-md-block"></div>
+
+        <!-- Highlight Stats -->
+      <div class="text-center">
+  <div class="highlight-nums">
+    <span>3</span>
+    <span class="in">in</span>
+    <span>5</span>
+  </div>
+  <p class="small text-muted">
+    families in <b>Panchkula</b> trust<br>
+     Zorgers for elder home care.
+  </p>
+</div>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-6 text-center mt-4 mt-md-0">
+      <p class="text-muted mb-2 fs-4">
+        Family-centered care focused community<br />
+        care close to <b>Panchkula</b>.
+      </p>
+      <img src="sujan-singh.webp" alt="Elder couple" class="right-img" />
+    </div>
+  </div>
+</section>
+
+
+
+<section class="stats-section">
+  <h4 class="mb-5 fw-bold text-primary"><i class="fas fa-award me-2"></i>9001:2015 ISO Certified Home Care Agency</h4>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stat-box bg-white pb-5">
+          <div class="stat-icon"><img src="l1.webp"></div>
+          <div class="stat-value">11+ Years</div>
+          <div class="stat-label">of providing Elder Care Services</div>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div class="stat-box stat-highlight pb-5">
+          <div class="stat-icon"><img src="l2.webp"></div>
+          <div class="stat-value">56,000+</div>
+          <div class="stat-label">Patients Served Till Now</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box bg-white">
+          <div class="stat-icon"><img src="l3.webp"></div>
+          <div class="stat-value">5,500+</div>
+          <div class="stat-label">Trained & Experienced Medical Attendants</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="callback-section text-center">
+  <h4 class="fw-bold mb-4 text-dark">Request a Call Back from our Experts</h4>
+  <div class="container">
+    <form id="callbackForm" onsubmit="handleSubmit(event)" class="callback-box row g-3 justify-content-center align-items-center">
+
+      <div class="col-md-2 col-sm-6">
+        <select class="form-select" name="service" required>
+          <option selected disabled>Looking For*</option>
+          <option>Job</option>
+          <option>Service</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <input type="tel" class="form-control" name="phone" placeholder="+91 Phone Number" required>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <select class="form-select" name="location" required>
+          <option selected disabled>Location</option>
+          <option>Chandigarh</option>
+          <option>Mohali</option>
+          <option>Panchkula</option>
+        </select>
+      </div>
+
+      <div class="col-md-2 col-sm-6">
+        <div class="form-check d-flex align-items-center justify-content-center">
+          <input class="form-check-input" type="checkbox" id="captchaCheck" required>
+          <label class="form-check-label ms-2" for="captchaCheck">I'm not a robot</label>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-12">
+        <button type="submit" class="btn btn-callback w-100">Request a Call Back</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+</section>
+
+<!-- Why Us Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+     
+      <div class="col-md-6">
+        <h3 class="section-title">Why Panchkula Trusts Zorgers</h3>
+        <p>Across Panchkula, our trained attendants deliver personalized care — day, night, or round-the-clock.:</p>
+        <ul>
+          <li><b>Locally available caregivers</b></li>
+          <li><b>Quick onboarding in Panchkula sectors</b></li>
+          <li><b>Emergency support just a call away</b></li>
+        </ul>
+      </div>
+       <div class="col-md-6">
+        <img src="panch1.png" class=" rounded shadow" style="height:250px">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- faq-start -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-12 col-md-5">
+          <img src="nri-care.webp" style="width:100%">
+        </div>
+        <div class="col-12 col-md-5 d-flex align-items-center">
+          <div class="faq-body">
+            <h2 style="font-size: 30px;
+            font-weight: 700;
+            color: #111827;">Frequently Asked Questions</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                  <span class="accordion-title ps-1">What are the steps to begin services for my elderly family member?</span>
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    To start services, simply contact us for a free consultation. We'll assess your needs, develop a personalized care plan, and match you with a suitable caregiver from our team.
+
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button id="accordion-button-2" aria-expanded="false">
+                  <span class="accordion-title ps-1">Can I choose a specific caregiver for my loved one?</span>
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                  Yes, we understand the importance of compatibility in caregiving. We offer 12 hours/24 hours and live in care services and also provide the flexibility to choose caregivers based on their expertise, experience, and even personality traits to match your loved one’s needs and preferences.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button id="accordion-button-3" aria-expanded="false">
+                  <span class="accordion-title ps-1">Can I change the caregiver if I am not satisfied?</span>
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+Absolutely. If you feel the caregiver is not the right fit, we can arrange a replacement to ensure your loved one’s needs and comfort are adequately met.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button id="accordion-button-4" aria-expanded="false">
+                  <span class="accordion-title ps-1">What if we do not like the home care staff. Will we &nbsp; &nbsp; &nbsp;&nbsp; get a replacement?</span>
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                   Yes. That's the key benefit you get as part of managed healthcare services at home. If for any reason there are issues or the healthcare need of your loved one change; we will resolve the issue in the best possible manner.
+
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button id="accordion-button-5" aria-expanded="false">
+                  <span class="accordion-title ps-1">In which areas in Panchkula is home care service available?</span>
+                  <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    Our home services for the elderly, patients, kids are available throughout Panchkula and its surrounding areas. We can arrange for visits, equipment, medicine anywhere in Panchkula as per the time of your convenience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- faq-end -->
+  <!-- Map Section -->
+<section class="py-5">
+  <div class="container">
+    <h4 class="mb-3">We're Right Here in Panchkula</h4>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27447.781794336923!2d76.85042470744776!3d30.691043509463643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f939926492433%3A0x52aaf917f5d7cfd5!2sThe%20Vintage%20Club%20-%20By%20Zorgers!5e0!3m2!1sen!2sin!4v1750237210249!5m2!1sen!2sin" width="100%" height="300" style="border:0; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const items = document.querySelectorAll('.accordion button');
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach((item) => item.addEventListener('click', toggleAccordion));
+</script>
+</body>
+</html>
